@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phishing site</title>
+  <style>
+    /* Gør body til en fuldskærms flex-container for centring */
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: #f5f7fb;
+      color: #111827;
+    }
+
+    body {
+      display: flex;
+      align-items: center;      /* centrerer lodret */
+      justify-content: center;  /* centrerer vandret */
+      padding: 20px;
+    }
+
+    /* Kort/card der indeholder teksten */
+    .card {
+      max-width: 720px;
+      width: 100%;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(16,24,40,0.08);
+      padding: 28px;
+      text-align: center; /* midterstiller tekst inden i card */
+      line-height: 1.5;
+    }
+
+    #overskrift {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #0f172a;
+    }
+
+    .card > div:not(#overskrift) {
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+
+    /* Små skærme: reducer størrelse */
+    @media (max-width: 420px) {
+      #overskrift { font-size: 1.4rem; }
+      .card { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div id="overskrift">Du blev phishet</div>
+    <div>
+      Vi har i dette forsøg skabt et link, for at undersøge hvor nemt og effektivt
+      egentlig er at phishe folk.
+    </div>
+    <div>
+      Du undrer dig måske over hvad phishing er... Det er, basalt sagt, en måde at
+      snyde dig på så man kan stjæle din information
+    </div>
+  </div>
+</body>
+</html>
