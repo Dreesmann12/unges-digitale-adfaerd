@@ -95,7 +95,7 @@ form button:active {
 }
 
 .RUC {
-  position: static;
+  position: fixed;
   bottom: 20px;   /* afstand fra bunden */
   left: 20px;     /* afstand fra venstre */
   width: 100px;   /* valgfri størrelse */
@@ -108,6 +108,7 @@ form button:active {
     @media (max-width: 420px) {
       #overskrift { font-size: 1.4rem; }
       .card { padding: 18px; }
+      .RUC{position: absolute; bottom: -50px;}
     }
   </style>
    <!-- Google tag (gtag.js) -->
@@ -146,7 +147,7 @@ form button:active {
       vi invitere dig til et kort interview. 
     </div>
   </div>
-  <form action="https://script.google.com/macros/s/AKfycbxcz6hgumh4IauEZJneuJqpfOgJqx55se1Ngoqfh7IdGg96lpbOIC8E-cTBCW6No4Y/exec" method="POST">
+  <form action="https://script.google.com/macros/s/AKfycbyijoI9MUGaOkEflLAbYblb1X9xUVm8DlfilwHFG9NlN6NqAQHyywDluUmnQ7tgFWM/exec" method="POST">
     <input placeholder = "Skriv din mail her" type="email" name="email" required>
     <button type="submit">Send</button>
     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
@@ -155,6 +156,7 @@ form button:active {
   </form>
 </body>
 </html>
+
 
 
 
