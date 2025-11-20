@@ -101,8 +101,9 @@ form button:active {
   width: 100px;   /* valgfri størrelse */
   z-index: 999;   /* sørger for at den ligger øverst */
 }
-
-
+input:focus ~ a .RUC {
+  display: none;
+}
 
     /* Små skærme: reducer størrelse */
     @media (max-width: 420px) {
@@ -156,6 +157,7 @@ form button:active {
   </form>
 </body>
 </html>
+
 
 
 
