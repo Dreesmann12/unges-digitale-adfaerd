@@ -20,6 +20,7 @@
       align-items: center;      /* centrerer lodret */
       justify-content: center;  /* centrerer vandret */
       padding: 20px;
+      flex-direction: column;
     }
 
     /* Kort/card der indeholder teksten */
@@ -45,6 +46,63 @@
       margin-top: 10px;
       font-size: 1rem;
     }
+    /* Form-container */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 360px;
+}
+
+/* Input-felt */
+form input[type="email"] {
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-top: 30px;
+}
+
+/* Hover/fokus-effekt */
+form input[type="email"]:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.25);
+}
+
+/* Knap */
+form button {
+  padding: 12px 14px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: -5px;
+}
+
+/* Hover/klik */
+form button:hover {
+  background: #2563eb;
+}
+
+form button:active {
+  transform: scale(0.97);
+}
+
+.RUC {
+  position: fixed;
+  bottom: 20px;   /* afstand fra bunden */
+  left: 20px;     /* afstand fra venstre */
+  width: 100px;   /* valgfri størrelse */
+  z-index: 999;   /* sørger for at den ligger øverst */
+}
+
+
 
     /* Små skærme: reducer størrelse */
     @media (max-width: 420px) {
@@ -74,24 +132,29 @@
 </script>
 </head>
 <body>
-  <form action="https://script.google.com/macros/s/AKfycbyxSUmIHnFbsHQ47udUjMoE2aX4Aac5RCxko148exMqoRyrOFZl2DnTvZ3AWTLpicg/exec" method="POST">
-    <input type="email" name="email" required>
-    <button type="submit">Send</button>
-  </form>
   <div class="card">
-    <div id="overskrift">Du blev phishet</div>
+    <div id="overskrift">Tak for din data</div>
     <div>
-      Vi har i dette forsøg skabt et link, for at undersøge hvor nemt og effektivt
-      egentlig er at phishe folk.
+      Du har været med i et forsøg om unges digitale adfærd, hvor vi vil se hvor tilbøjelig unge er for at trykke på links
     </div>
     <div>
-      Du undrer dig måske over hvad phishing er... Det er, basalt sagt, en måde at
-      snyde dig på så man kan stjæle din information
+      Lige nu ved vi dog ikke andet end antallet der har klikket på linket, og vi kunne tænke os at høre mere omkring din oplevelse her. Altså mere omkring
+      hvad du lå mærke til, om du var skeptisk angående at tilgå linket, og generalt bare en dybere forståelse. 
+    </div>
+    <div>
+      Så hvis du har lyst, kan du indtaste din mail, og så vil
+      vi invitere dig til et kort interview. 
     </div>
   </div>
+  <form action="https://script.google.com/macros/s/AKfycbyxSUmIHnFbsHQ47udUjMoE2aX4Aac5RCxko148exMqoRyrOFZl2DnTvZ3AWTLpicg/exec" method="POST">
+    <input placeholder = "Skriv din mail her" type="email" name="email" required>
+    <button type="submit">Send</button>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+      <img class = "RUC" src="RUC.png" alt="">
+    </a>
+  </form>
 </body>
 </html>
-
 
 
 
